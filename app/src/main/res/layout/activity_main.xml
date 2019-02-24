@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/Black_Cat">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/connect_ll">
+        <LinearLayout
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal"
+            android:id="@+id/connection_status_ll"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:background="@color/Cherry_Red"></LinearLayout>
+        <Button
+            android:layout_weight="9"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Connect"
+            android:id="@+id/connect_btn"/>
+    </LinearLayout>
+
+    <Button
+        android:layout_below="@id/username_password_ll"
+        android:id="@+id/publish_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="publish" />
+    <LinearLayout
+        android:layout_below="@id/connect_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/server_port_ll">
+
+        <EditText
+            android:layout_weight="3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Server Address"
+            android:gravity="left"
+            android:background="@color/White"
+            android:layout_margin="2dp"
+            android:id="@+id/server_address_et"
+            android:textColor="@color/Black"/>
+
+        <EditText
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Port"
+            android:gravity="left"
+            android:background="@color/White"
+            android:layout_margin="2dp"
+            android:id="@+id/port_et"
+            android:textColor="@color/Black"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_below="@id/server_port_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/username_password_ll">
+
+        <EditText
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Username"
+            android:gravity="left"
+            android:background="@color/White"
+            android:layout_margin="2dp"
+            android:id="@+id/username_et"
+            android:textColor="@color/Black"/>
+
+        <EditText
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:gravity="left"
+            android:background="@color/White"
+            android:layout_margin="2dp"
+            android:id="@+id/password_et"
+            android:textColor="@color/Black"/>
+    </LinearLayout>
+    <EditText
+        android:layout_below="@id/publish_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Topic"
+        android:gravity="left"
+        android:background="@color/White"
+        android:layout_margin="2dp"
+        android:textColor="@color/Black"
+        android:id="@+id/topic_et"/>
+    <EditText
+        android:layout_below="@id/topic_et"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:hint="Message"
+        android:gravity="left"
+        android:background="@color/White"
+        android:layout_margin="2dp"
+        android:textColor="@color/Black"
+        android:id="@+id/message_et"/>
+
+</RelativeLayout>
